@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>State Management Example</title>
+</head>
+<body>
+
+    <h2>Counter App</h2>
+
+    <p>Count: <span id="count">0</span></p>
+
+    <button onclick="increment()">Increment</button>
+    <button onclick="decrement()">Decrement</button>
+
+    <script>
+        // State
+        let count = 0;
+
+        // Update UI
+        function render() {
+            document.getElementById("count").textContent = count;
+        }
+
+        // Change State
+        function increment() {
+            count++;
+            render();
+        }
+
+        function decrement() {
+            count--;
+            render();
+        }
+
+        render();
+    </script>
+
+</body>
+</html>
